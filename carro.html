@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        fami = [
+            {
+                Sobrenome: 'silva',
+                quantidadeDemembro: 5,
+                renda: 2000,
+                lugar: 'rua dos bobos'
+
+            }, {
+
+                Sobrenome: 'alves',
+                quantidadeDemembro: 6,
+                renda: 32525,
+                lugar: 'rua dos tolos'
+
+            }, {
+                Sobrenome: 'albertina',
+                quantidadeDemembro: 2,
+                renda: 1453663,
+                lugar: 'rua dos ricos'
+
+            }, {
+
+                Sobrenome: 'sla',
+                quantidadeDemembro: 30,
+                renda: 3939399,
+                lugar: 'rua dos cabeça'
+
+            }
+
+
+
+        ]
+
+        for (let i = 0; i < 5; i++) {
+            var nome = fami[i].Sobrenome;
+            var quantidade = fami[i].quantidadeDemembro;
+            var renda = fami[i].renda;
+            var lugar = fami[i].lugar;
+
+            document.write("sobrenome " + nome +
+                "\n quantidade de membro" + quantidade +
+                "\n renda " + renda +
+                "\n lugar que reside " + lugar +
+                "\n <br>");
+        }
+
+    </script>
+
+</body>
+
+</html>
