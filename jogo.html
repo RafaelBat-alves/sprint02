@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOGO LOUCO</title>
+</head>
+<body>
+   
+  
+    <script>
+var PERSONAGEM = window.prompt("digite nome do personagem numero 1");
+var PERSONAGEM2 = window.prompt("digite nome do personagem numero 2");
+function pular(){
+    document.write("<br><br>");
+
+
+}
+document.write("<h1>"+PERSONAGEM+"</h1>");
+
+var vida1 =Math.round(Math.random()*10000);
+pular();
+document.write("VIDA DO "+ PERSONAGEM+"  "+vida1);
+pular();
+var DANO =Math.round(Math.random()*100);
+pular();
+document.write("DANO DO "+ PERSONAGEM+"  "+DANO);
+pular();
+document.write(  " <input type='text'>");
+document.write("<h1>"+PERSONAGEM2+"</h1>");
+var vida2 =Math.round(Math.random()*10000);
+pular();
+document.write("VIDA DO "+ PERSONAGEM2+"  "+vida2);
+
+pular();
+var DANO2 =Math.round(Math.random()*100);
+pular();
+document.write("DANO DO "+ PERSONAGEM2+"  "+DANO2);
+pular();
+
+document.write(  " <input type='text'>");
+
+
+
+
+
+var passo;
+var dor =0;
+for (passo = 0; passo < vida2; passo+=DANO) {
+
+    dor++
+   
+}
+
+pular();
+
+document.write("QUANTIDADE DE ROUDE PARA DERROTA "+dor+ " PERSONAGEM "+ PERSONAGEM2);
+var pass;
+var doi =0;
+for (pass = 0; pass < vida1; pass+=DANO2) {
+
+    doi++
+
+}
+pular();
+document.write("QUANTIDADE DE ROUDE PARA DERROTA "+doi+ " PERSONAGEM "+ PERSONAGEM);
+pular();
+if(dor < doi){
+    document.write("O PERSONAGEM "+ "<h1>"+PERSONAGEM +"</h1>"+" GANHOU ESSE ROUDE");
+}else{
+    document.write("O PERSONAGEM "+ "<h1>"+PERSONAGEM2 +"</h1>"+" GANHOU ESSE ROUDE");
+
+}
+    </script>  
+</body>
+</html>
