@@ -50,64 +50,77 @@
       var titulo = "COMEX";
       var primeiro = "LISTA DE CLIENTES";
       var segundo = "CODIGO ";
-      var terceiro = "3. Requisitos não funcionais";
-      var quarto = "4. Requisitos  funcionais";
+  
       var ano = window.prompt("Informe o ano");
-      var anoN1 = 1980;
-      var anoN2 = 1981;
-      var anoN3 = 1984;
+    
       
       
       var mes1 = "JANEIRO";
       var mes2 = "MARÇO";
       var mes3 = "AGOSTO";
       
-      var idade1 = anoN1 -ano;
-      var idade2= anoN1 -ano;
-      var idade3= anoN1 -ano;
-      function soma(n1,n2,n3){
-          var soma = n1+n1+n1;
-          return soma;
-      };
-      function media(){
-          
-          document.write(Math.round((idade1+idade2+idade3)/3));
-      
-      
-      };
+    
+ 
+    
       mostraTitulo(titulo);
       mostraconteúdo(primeiro);
       linha();
       var numeroDeCode= window.prompt("QUANTIDADE DE PESSOAS");
-      
+      var somat=0;
       for(var i = 0; i<numeroDeCode;i++){
       
       mostracodigo( segundo+(1+i));
-      var nome1 = window.prompt("NOME DAS PESSOAS"+(1+i));
+      var nome1 = window.prompt("NOME DAS PESSOAS "+(1+i));
+      var soma = window.prompt("ANO DE NASCIMENTO DA PESSOA: "+(1+i));
+  
       document.write("<ul>");
       
       document.write("<li>"+"NOME: "+nome1+"</li>");
       pular();
       document.write("<li>"+"MES DE NASCIMENTO: "+mes1+"</li>");
       pular();
-      document.write("<li>"+"ANO DE NASCIMENTO:"+ anoN1+"</li>");
+      document.write("<li>"+"ANO DE NASCIMENTO:"+ soma+"</li>");
+      if(ano-soma<=17){
+   pular();
+      document.write("<li> Classificação Etária: ADOLESCENTE </li>");
+    
+    }else if(ano-soma<=29  ){
+        pular();
+      document.write("<li> Classificação Etária: JOVEM </li>");
+    
+    }else if(ano-soma<=59 ){
+        pular();
+      document.write("<li> Classificação Etária: ADULTO </li>");
+    
+    }else if(ano-soma>=60){
+        pular();
+      document.write("<li> Classificação Etária: IDOSO </li>");
+    
+    }else{
+        pular();
+      document.write("<li> VEIO VC FEZ ALGO ERRADO </li>");
+    
+    }
       document.write("</ul>");
       linha();
+     somat +=ano-soma;
       
       }
+     
       
       
       document.write("***ESTATISTICA***");
       pular();
-      document.write("SOMA DAS IDADES "+soma(idade1,idade2,idade3) )
+      document.write("SOMA DAS IDADES "+somat );
       
       pular();
-      document.write("MEDIA DAS IDADES ")
-      media();
-      
+       var media = somat/numeroDeCode;
+      document.write("MEDIA DAS IDADES "+media);
+
+     
       mostrarodapé("ALURA LEVEL UP");
       
       </Script>
-    
+  
 </body>
 </html>
