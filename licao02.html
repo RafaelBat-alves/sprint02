@@ -71,13 +71,15 @@
       
       mostracodigo( segundo+(1+i));
       var nome1 = window.prompt("NOME DAS PESSOAS "+(1+i));
+      var mesDeNacimento = window.prompt("MES DE NASCIMENTO DA PESSOA: "+(1+i));
       var soma = window.prompt("ANO DE NASCIMENTO DA PESSOA: "+(1+i));
+
   
       document.write("<ul>");
       
       document.write("<li>"+"NOME: "+nome1+"</li>");
       pular();
-      document.write("<li>"+"MES DE NASCIMENTO: "+mes1+"</li>");
+      document.write("<li>"+"MES DE NASCIMENTO: "+mesDeNacimento+"</li>");
       pular();
       document.write("<li>"+"ANO DE NASCIMENTO:"+ soma+"</li>");
       if(ano-soma<=17){
